@@ -1,0 +1,10 @@
+version: '3'
+services:
+  lanproxy-server:
+    image: lan:latest
+    container_name: lanproxy
+    ports: 
+      - 8090:8090
+    volumes:
+      - ./config.properties:/opt/proxy-server-20171116/conf/config.properties
+      - ./lanproxy-data:/root/.lanproxy
